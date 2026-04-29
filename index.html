@@ -92,67 +92,108 @@ body{
   z-index:10;
 }
 
-.p1{animation:p1Anim 12s infinite;}
-.p2{animation:p2Anim 12s infinite;}
-.p3{animation:p3Anim 12s infinite;}
+/* TEMPO TOTAL AGORA MAIOR */
+.p1{animation:p1Anim 40s infinite;}
+.p2{animation:p2Anim 40s infinite;}
+.p3{animation:p3Anim 40s infinite;}
+.p4{animation:p4Anim 40s infinite;}
+.p5{animation:p5Anim 40s infinite;}
 
+/* 0–5s fundo */
+
+/* PRODUTO 1 */
 @keyframes p1Anim{
-  0%,40%{
+  0%,12%{
     opacity:0;
-    transform:translate(-150%,-50%) scale(.6) rotate(-12deg);
+    transform:translate(-150%,-50%) scale(.6);
   }
-  45%,60%{
+  15%,30%{
     opacity:1;
-    transform:translate(-50%,-50%) scale(1) rotate(0);
+    transform:translate(-50%,-50%) scale(1);
   }
-  65%,100%{
+  33%,100%{
     opacity:0;
-    transform:translate(-150%,-50%) scale(.7) rotate(-15deg);
+    transform:translate(-150%,-50%) scale(.7);
   }
 }
 
+/* PRODUTO 2 */
 @keyframes p2Anim{
-  0%,60%{
+  0%,30%{
     opacity:0;
-    transform:translate(150%,-50%) scale(.5) rotate(10deg);
+    transform:translate(150%,-50%) scale(.5);
   }
-  65%,78%{
+  33%,48%{
     opacity:1;
     transform:translate(-50%,-50%) scale(1.05);
   }
-  82%,100%{
+  51%,100%{
     opacity:0;
     transform:translate(-50%,-150%) scale(.7);
   }
 }
 
+/* PRODUTO 3 */
 @keyframes p3Anim{
-  0%,78%{
+  0%,48%{
     opacity:0;
     transform:translate(-50%,-150%) scale(.5);
   }
-  83%,95%{
+  51%,66%{
     opacity:1;
     transform:translate(-50%,-50%) scale(1);
   }
-  100%{
+  69%,100%{
     opacity:0;
     transform:scale(.3);
   }
 }
 
+/* PRODUTO 4 */
+@keyframes p4Anim{
+  0%,66%{
+    opacity:0;
+    transform:translate(150%,-50%) scale(.5);
+  }
+  69%,84%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1);
+  }
+  87%,100%{
+    opacity:0;
+    transform:translate(150%,-50%) scale(.7);
+  }
+}
+
+/* PRODUTO 5 */
+@keyframes p5Anim{
+  0%,84%{
+    opacity:0;
+    transform:translate(-150%,-50%) scale(.5);
+  }
+  87%,95%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1.05);
+  }
+  100%{
+    opacity:0;
+    transform:translate(-50%,130%) scale(.7);
+  }
+}
+
+/* FLASH */
 .flash{
   position:absolute;
   inset:0;
   background:rgba(255,195,0,.4);
   opacity:0;
-  animation:flash 12s infinite;
+  animation:flash 40s infinite;
   z-index:9;
 }
 
 @keyframes flash{
-  41%,61%,80%{opacity:.3;}
-  0%,40%,42%,60%,62%,79%,81%,100%{opacity:0;}
+  13%,31%,49%,67%,85%{opacity:.3;}
+  0%,12%,14%,30%,32%,48%,50%,66%,68%,84%,86%,100%{opacity:0;}
 }
 
 .logo{
@@ -189,6 +230,8 @@ body{
   <img src="produto1.png" class="product p1">
   <img src="produto2.png" class="product p2">
   <img src="produto3.png" class="product p3">
+  <img src="produto4.png" class="product p4">
+  <img src="produto5.png" class="product p5">
 
 </div>
 
