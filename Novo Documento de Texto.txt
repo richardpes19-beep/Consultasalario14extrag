@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banner Animado PRO</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  height:100vh;
+  overflow:hidden;
+  background:#050505;
+  font-family:Arial;
+}
+
+.banner{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  background:
+    radial-gradient(circle at 50% 40%, rgba(255,195,0,.15), transparent 35%),
+    linear-gradient(160deg,#111,#020202);
+}
+
+.hex{
+  position:absolute;
+  inset:0;
+  opacity:.3;
+  background-image:
+    linear-gradient(30deg, rgba(255,255,255,.05) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,.05) 87.5%),
+    linear-gradient(150deg, rgba(255,255,255,.05) 12%, transparent 12.5%, transparent 87%, rgba(255,255,255,.05) 87.5%);
+  background-size:90px 155px;
+}
+
+.top-bar{
+  position:absolute;
+  top:0;
+  left:0;
+  width:90%;
+  height:110px;
+  background:#FFC300;
+  border-bottom-right-radius:55px;
+  z-index:5;
+}
+
+.left-shape{
+  position:absolute;
+  left:-100px;
+  top:100px;
+  width:230px;
+  height:100%;
+  background:#FFC300;
+  transform:skewX(-12deg);
+  z-index:4;
+}
+
+.bottom-bar{
+  position:absolute;
+  bottom:0;
+  right:0;
+  width:85%;
+  height:110px;
+  background:#FFC300;
+  border-top-left-radius:55px;
+  z-index:5;
+}
+
+.light{
+  position:absolute;
+  width:450px;
+  height:450px;
+  background:radial-gradient(circle, rgba(255,195,0,.5), transparent 70%);
+  filter:blur(25px);
+  animation:lightMove 6s infinite alternate;
+}
+
+@keyframes lightMove{
+  0%{top:5%;left:-10%;}
+  50%{top:40%;left:50%;}
+  100%{top:70%;left:10%;}
+}
+
+.product{
+  position:absolute;
+  width:65%;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  opacity:0;
+  z-index:10;
+}
+
+.p1{animation:p1Anim 12s infinite;}
+.p2{animation:p2Anim 12s infinite;}
+.p3{animation:p3Anim 12s infinite;}
+
+@keyframes p1Anim{
+  0%,40%{
+    opacity:0;
+    transform:translate(-150%,-50%) scale(.6) rotate(-12deg);
+  }
+  45%,60%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1) rotate(0);
+  }
+  65%,100%{
+    opacity:0;
+    transform:translate(-150%,-50%) scale(.7) rotate(-15deg);
+  }
+}
+
+@keyframes p2Anim{
+  0%,60%{
+    opacity:0;
+    transform:translate(150%,-50%) scale(.5) rotate(10deg);
+  }
+  65%,78%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1.05);
+  }
+  82%,100%{
+    opacity:0;
+    transform:translate(-50%,-150%) scale(.7);
+  }
+}
+
+@keyframes p3Anim{
+  0%,78%{
+    opacity:0;
+    transform:translate(-50%,-150%) scale(.5);
+  }
+  83%,95%{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1);
+  }
+  100%{
+    opacity:0;
+    transform:scale(.3);
+  }
+}
+
+.flash{
+  position:absolute;
+  inset:0;
+  background:rgba(255,195,0,.4);
+  opacity:0;
+  animation:flash 12s infinite;
+  z-index:9;
+}
+
+@keyframes flash{
+  41%,61%,80%{opacity:.3;}
+  0%,40%,42%,60%,62%,79%,81%,100%{opacity:0;}
+}
+
+.logo{
+  position:absolute;
+  top:30px;
+  left:30px;
+  font-size:32px;
+  font-weight:900;
+  z-index:6;
+}
+
+.logo span{color:#000;}
+.logo b{color:#fff;}
+
+</style>
+</head>
+
+<body>
+
+<div class="banner">
+
+  <div class="hex"></div>
+  <div class="light"></div>
+  <div class="flash"></div>
+
+  <div class="top-bar"></div>
+  <div class="left-shape"></div>
+  <div class="bottom-bar"></div>
+
+  <div class="logo">
+    <span>CHEGUEI</span><b>!</b>
+  </div>
+
+  <img src="produto1.png" class="product p1">
+  <img src="produto2.png" class="product p2">
+  <img src="produto3.png" class="product p3">
+
+</div>
+
+</body>
+</html>
